@@ -1,6 +1,7 @@
 // Sélectionner tous les éléments nécessaires
 const articles = document.querySelectorAll('.card-body');
 const totalElement = document.querySelector('.total');
+console.log(articles);
 
 // Fonction pour mettre à jour le total
 function updateTotal() {
@@ -15,7 +16,9 @@ function updateTotal() {
 
 // Fonction pour gérer l'augmentation de la quantité
 function increaseQuantity(event) {
+   // console.log(event.target)
     const article = event.target.closest('.card-body');
+    //console.log(article)
     const quantiteElement = article.querySelector('.quantity');
     let quantite = parseInt(quantiteElement.textContent);
     quantite++;
